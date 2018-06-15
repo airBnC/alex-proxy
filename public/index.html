@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>FEC Proxy</title>
+    <script>
+      window.id = window.location.pathname;
+      if (window.id === '/rooms/' || window.id === '/' || window.id === '/rooms') {
+        window.id = 1;
+      } else {
+        window.id = window.id.replace(/\/rooms/g, '');
+        window.id = window.id.replace(/\//g, '');
+      };
+    </script>
+  </head>
+  <body>
+    <div id="Info"></div>
+    <div id="app"></div>
+    <div id="Booking"></div>
+    <div id="Reviews"></div>
+  </body>
+  <script>
+    let script;
+    script = document.createElement('script');
+    script.src=`http://localhost:3001/rooms/${window.id}/dist/bundle.js`;
+    document.body.append(script);
+    script = document.createElement('script');
+    script.src=`http://localhost:3002/rooms/${window.id}/dist/bookingbundle.js`;
+    document.body.append(script);
+    script = document.createElement('script');
+    script.src=`http://localhost:3003/rooms/${window.id}/infobundle.js`;
+    document.body.append(script);
+    script = document.createElement('script');
+    script.src=`http://localhost:3004/rooms/${window.id}/reviewsbundle.js`;
+    document.body.append(script);
+  </script>
+</html>
