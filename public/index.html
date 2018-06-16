@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>FEC Proxy</title>
+    <link rel="stylesheet" href="styles.css">
     <script>
       window.id = window.location.pathname;
       if (window.id === '/rooms/' || window.id === '/' || window.id === '/rooms') {
@@ -14,10 +15,14 @@
     </script>
   </head>
   <body>
-    <div id="Info"></div>
-    <div id="app"></div>
-    <div id="Booking"></div>
-    <div id="Reviews"></div>
+    <div id="center-main">
+      <div id="Info"></div>
+      <div id="app"></div>
+      <div id="Reviews"></div>  
+    </div>
+    <div id="side-booking">
+      <div id="Booking"></div>
+    </div>
   </body>
   <script>
     let script;

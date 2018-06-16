@@ -1,0 +1,28 @@
+body {
+  display: flex;
+}
+
+#center-main {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  max-width: 650px;
+  box-sizing: border-box;
+}
+
+#Info {
+  box-sizing: border-box;
+}
+
+#app {
+  box-sizing: border-box;
+  min-height: 260px;
+}
+
+#Reviews {
+  box-sizing: border-box;
+}
+
+#Booking {
+  box-sizing: border-box;
+}
